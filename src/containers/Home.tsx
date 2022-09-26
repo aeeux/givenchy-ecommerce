@@ -13,7 +13,7 @@ export type DataType = {
   slug: string;
 };
 
-const gridUtils = [600, 400, 600, 800, 600]
+const gridUtils = [800, 800, 800, 800, 800]
 
 export default function Home() {
   const [gridVisible, setGridVisible] = useState(true);
@@ -23,7 +23,7 @@ export default function Home() {
   const animation = useAnimation()
   const mapData: DataType[] = Array.from(jsonData);
 
-  const bgColor = useMotionValue("black")
+  const bgColor = useMotionValue("yellow")
   const x = useMotionValue(0)
   const y = useMotionValue(0)
 
@@ -42,7 +42,7 @@ export default function Home() {
         y: 0,
         transition: defaultTransition,
       }))
-      bgColor.set("white")
+      bgColor.set("black")
 
 
       await animation.start({
@@ -61,18 +61,18 @@ export default function Home() {
 
 
         sequence();
-    }, 4000)
+    }, 2500)
   }, [])
 
   const handleGridParallax = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (gridRef.current) {
-      const speed = -30
+      const speed = -60
       const {width, height} = gridRef.current.getBoundingClientRect()
       const offsetX = event.pageX - width * 0.5;
       const offsetY = event.pageY - height * 0.5;
 
-      const newTransformX = (offsetX * speed) / 100;
-      const newTransformY = (offsetY * speed) / 100;
+      const newTransformX = (offsetX * speed) / 110;
+      const newTransformY = (offsetY * speed) / 110;
 
       x.set(newTransformX)
       y.set(newTransformY)
