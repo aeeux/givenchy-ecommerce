@@ -1,0 +1,80 @@
+[
+    {
+        "cover": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1244&q=80",
+        "title": "Mexico",
+        "color": "#b22c3b",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1534800891164-a1d96b5114e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=759&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1511881830150-850572962174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1597739239353-50270a473397?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+        "title": "Mexico",
+        "color": "#b22c3b",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1573108724029-4c46571d6490?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1417716146732-918825b83fa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1516259670444-ad07068e14e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1589085947445-a491beee038d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1560840067-ddcaeb7831d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=779&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    },
+    {
+        "cover": "https://images.unsplash.com/photo-1603929260784-262f38411fe4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "title": "Mexico",
+        "color": "black",
+        "slug": "mexico"
+    }
+]
