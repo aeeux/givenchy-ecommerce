@@ -66,3 +66,26 @@ body {
         margin: 0px 5vw;
     }
 }
+
+.custom-button {
+    padding: 0;
+    background-color: white;
+    box-shadow: none;
+    border: none;
+
+    display: flex;
+    padding: 10px;
+    border: 1px solid black;
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+        background-color: black;
+        
+        svg {
+            color: white;
+        }
+    }
+    svg {
+        stroke-width: 1px;
+    }
+}
