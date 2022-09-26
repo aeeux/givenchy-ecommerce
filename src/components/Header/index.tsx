@@ -12,6 +12,7 @@ export default function Header({view, toggleView}: Props) {
     className='header-container'
     >
         <button
+        className='custom-button'
         onClick={() => toggleView(!view)}
         >
             {view ? <Columns /> : <Grid />}
