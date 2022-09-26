@@ -84,7 +84,7 @@ export default function Home() {
 
   return (
     <>
-    <Loader title={"Cities"} loaderControls={loaderControls} />
+    <Loader title={"Givenchy"} loaderControls={loaderControls} />
     <Header view={gridVisible} toggleView={(value) => setGridVisible(value)} />
       <motion.div className="content"
       style={{ backgroundColor: bgColor,
