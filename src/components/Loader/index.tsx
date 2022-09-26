@@ -31,6 +31,7 @@ export default function Loader({title, loaderControls}: Props) {
 >
 
             {title}
+            <p className='text-sm font-italic'>haute couture</p>
         </motion.h1>
     </motion.div>
   )
