@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DataType } from '../../containers/Home';
-import { motion, Variants } from 'framer-motion'
+import { motion, useAnimation, Variants } from 'framer-motion'
 import './style.scss'
 import { defaultTransition } from '../../utils/transition';
 import HomeButton from './HomeButton';
@@ -25,6 +25,17 @@ const variants:Variants = {
 }
 
 export default function Model({pageContext}: Props) {
+    const control = useAnimation()
+
+    useEffect(() => {
+        setTimeout(() => {
+            control.start({
+                opacity: 0,
+                transition: defaultTransition,
+            })
+        }, 2000)
+    }, [])
+
     return (
         <>
         <HomeButton />
@@ -35,7 +46,7 @@ export default function Model({pageContext}: Props) {
                 initial={"initial"}
                 animate={"animate"}
                 src={pageContext.cover}
-                transition={defaultTransition}
+                transition={{defaultTransition, delay: 2}}
                 />
             </div>
         </div>
