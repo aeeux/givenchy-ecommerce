@@ -23,7 +23,7 @@ export default function Home() {
   const animation = useAnimation()
   const mapData: DataType[] = Array.from(jsonData);
 
-  const bgColor = useMotionValue("yellow")
+  const bgColor = useMotionValue("whitesmoke")
   const x = useMotionValue(0)
   const y = useMotionValue(0)
 
@@ -34,8 +34,8 @@ export default function Home() {
 
     async function sequence() {
       await animation.set((index) => ({
-        y: gridUtils[index % 5],
-        scale: 1.1,
+        y: gridUtils[index%5],
+        scale: 0.7,
       }))
 
       await animation.start((index) => ({
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
         )}
         {!gridVisible && (
-          <div className="list-elements">
+          <div className="">
             {mapData.map((element, index) => (
               <div className="element">
                 <div className="thumbnail-wrapper">
