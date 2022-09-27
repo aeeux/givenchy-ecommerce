@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { DataType } from '../../containers/Home'
 import './style.scss'
 import { motion } from 'framer-motion'
@@ -11,6 +11,7 @@ type Props = {
 }
 
 export default function ImageLink({index, element}: Props) {
+  const [isHover, setIsHover] = useState();
 
   const navigateTo = () => {
     navigate(element.slug)
@@ -18,12 +19,15 @@ export default function ImageLink({index, element}: Props) {
 
 
   return (
-    <motion.img 
+    <>
+    <motion.img
     onClick={navigateTo}
+    style={{ backgroundColor: isHover ? 'lightblue' : 'yellow' }}
     className='image-link-item'
-    layoutId={`container-${index}`}
+    layoutId={`container-${index} transition-all delay-50 hover:border-8 border-yellow-500`}
     transition={defaultTransition}
     src={element.cover}
     />
+    </>
   )
 }
