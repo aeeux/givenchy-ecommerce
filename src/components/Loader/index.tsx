@@ -29,9 +29,8 @@ export default function Loader({title, loaderControls}: Props) {
         animate={"animate"}
         transition={defaultTransition}
 >
-
             {title}
-            <p className='text-sm font-italic'>haute couture</p>
+            <p className='text-sm italic'>*haute couture*</p>
         </motion.h1>
     </motion.div>
   )
