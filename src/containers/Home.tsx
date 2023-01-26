@@ -3,8 +3,8 @@ import Header from "../components/Header";
 import ImageLink from "../components/ImageLink";
 import Loader from "../components/Loader";
 import jsonData from "../data.json";
-import { motion, useAnimation, useMotionValue, useSpring } from 'framer-motion'
-import { defaultTransition } from '../utils/transition'
+import { motion, useAnimation, useMotionValue, useSpring } from "framer-motion";
+import { defaultTransition } from "../utils/transition";
 
 export type DataType = {
   cover: string;
@@ -13,99 +13,102 @@ export type DataType = {
   slug: string;
 };
 
-const gridUtils = [800, 800, 800, 800, 800]
+const gridUtils = [800, 800, 800, 800, 800];
 
 export default function Home() {
   const [gridVisible, setGridVisible] = useState(true);
-  const gridRef = useRef<HTMLDivElement | null>(null)
-  
-  const loaderControls = useAnimation()
-  const animation = useAnimation()
+  const gridRef = useRef<HTMLDivElement | null>(null);
+
+  const loaderControls = useAnimation();
+  const animation = useAnimation();
   const mapData: DataType[] = Array.from(jsonData);
 
-  const bgColor = useMotionValue("whitesmoke")
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-
-
+  const bgColor = useMotionValue("whitesmoke");
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
   useEffect(() => {
-
     async function sequence() {
       await animation.set((index) => ({
-        y: gridUtils[index%5],
+        y: gridUtils[index % 5],
         scale: 0.7,
-      }))
+      }));
 
       await animation.start((index) => ({
         y: 0,
         transition: defaultTransition,
-      }))
-      bgColor.set("black")
-
+      }));
+      bgColor.set("black");
 
       await animation.start({
         scale: 1,
         transition: defaultTransition,
-      })
-    
-      setGridVisible(false);
+      });
 
+      setGridVisible(true);
     }
     setTimeout(() => {
       loaderControls.start({
-          opacity: 0,
-          transition: {defaultTransition}
-        });
+        opacity: 0,
+        transition: { defaultTransition },
+      });
 
+      sequence();
+    }, 2500);
+  }, []);
 
-        sequence();
-    }, 2500)
-  }, [])
-
-  const handleGridParallax = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleGridParallax = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     if (gridRef.current) {
-      const speed = -60
-      const {width, height} = gridRef.current.getBoundingClientRect()
+      const speed = -60;
+      const { width, height } = gridRef.current.getBoundingClientRect();
       const offsetX = event.pageX - width * 0.5;
       const offsetY = event.pageY - height * 0.5;
 
       const newTransformX = (offsetX * speed) / 110;
       const newTransformY = (offsetY * speed) / 110;
 
-      x.set(newTransformX)
-      y.set(newTransformY)
+      x.set(newTransformX);
+      y.set(newTransformY);
     }
-  }
+  };
 
-  const xMotion = useSpring(x, {stiffness: 400, damping: 90})
-  const yMotion = useSpring(y, {stiffness: 400, damping: 90})
+  const xMotion = useSpring(x, { stiffness: 400, damping: 90 });
+  const yMotion = useSpring(y, { stiffness: 400, damping: 90 });
 
   return (
     <>
-    <Loader title={"Givenchy"} loaderControls={loaderControls} />
-    <Header view={gridVisible} toggleView={(value) => setGridVisible(value)} />
-      <motion.div className="content"
-      style={{ backgroundColor: bgColor,
-      transition: 'background-color 1.25s ease-in-out'}}
+      <Loader title={"Andreas E. Eriksen"} loaderControls={loaderControls} />
+      <Header
+        view={gridVisible}
+        toggleView={(value) => setGridVisible(value)}
+      />
+      <motion.div
+        className="content"
+        style={{
+          backgroundColor: bgColor,
+          transition: "background-color 1.25s ease-in-out",
+        }}
       >
         {gridVisible && (
           <div className="grid-container">
-            <motion.div className="grid-elements"
-            onMouseMove={handleGridParallax}
-            ref={gridRef}
-            transition={defaultTransition}
-            style={{
-              x: xMotion,
-              y: yMotion,
-            }}
+            <motion.div
+              className="grid-elements"
+              onMouseMove={handleGridParallax}
+              ref={gridRef}
+              transition={defaultTransition}
+              style={{
+                x: xMotion,
+                y: yMotion,
+              }}
             >
               {mapData.map((element, index) => (
-                <motion.div className="element"
-                key={element.slug}
-                animate={animation}
-                custom={index}
+                <motion.div
+                  className="element"
+                  key={element.slug}
+                  animate={animation}
+                  custom={index}
                 >
                   <div className="thumbnail-wrapper">
                     <ImageLink element={element} index={index} />
